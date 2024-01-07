@@ -1,8 +1,18 @@
 fun main() {
-    val name: String = "kim"
-    when (name) {
-        "kim" -> println("1")
-        "park" -> println("2")
-        "lee" -> println("3")
+    val value: String? = "ABC"
+    printStr(value)
+
+    val names: List<String> = listOf("kim", "park", "lee")
+    names.forEach { println(it) }
+
+}
+
+fun printStr(value: String?) {
+    if (value == null) {
+        val str: String? = value
+        println(str)
+    } else {
+        val str: String = value
+        println(str)
     }
 }
